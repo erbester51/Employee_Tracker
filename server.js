@@ -1,5 +1,5 @@
 const express = require('express');
-const inquire = require("inquirer");
+const inquirer = require("inquirer");
 const db = require('./db/connection');
 const mysql = require('mysql2');
 
@@ -14,7 +14,7 @@ app.use(( req, res ) => {
 });
 
 const navigateChoices = () => {
-    inquirer.promopt({
+    inquirer.prompt({
         type: 'list',
         name: 'navigate',
         message: 'What would you like to do?',
