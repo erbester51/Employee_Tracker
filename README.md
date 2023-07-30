@@ -12,3 +12,6 @@ This application also gives you the ability to:
     - Add new employees
     - Update existing employees
 
+## Issues
+I am currently running into an issue at the  command line and not being able to select the different options
+
