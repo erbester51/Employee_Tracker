@@ -1,4 +1,4 @@
-### Employee Tracker
+# Employee Tracker
 
 ## About
 This application allows you to to access the database where all of your employee information is stored. You are able to view:
