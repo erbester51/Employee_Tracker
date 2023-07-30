@@ -14,7 +14,48 @@ app.use(( req, res ) => {
 });
 
 const navigateChoices = () => {
+    inquirer.promopt({
+        type: 'list',
+        name: 'navigate',
+        message: 'What would you like to do?',
+        choices: ['View All Departments',
+            'View All Roles',
+            'View All Exmployees',
+            'Add A Department',
+            'Add A Role',
+            'Add An Employee',
+            'Update An Employee Role'],
+    }).then(answer => {
+        switch (answer.navigate) {
+            case 'View All Departments':
+                viewAllDepartments();
+                break;
+            
+            case 'View All Roles':
+                viewAllRoles();
+                break;
+            
+            case 'View All Employees':
+                viewAllEmployees();
+                break;
+            
+            case 'Add A Department':
+                addADepartment();
+                break;
 
+            case 'Add A Role':
+                addARole();
+                break;
+
+            case 'Add Am Employee':
+                addAnmEmployee();
+                break;
+            
+            case 'Update An Employee Role':
+                updateAnEmployeeRole();
+                break;
+        }
+    })
 };
 
 const viewAllDepartments = () => {
